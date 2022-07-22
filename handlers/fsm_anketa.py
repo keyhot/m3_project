@@ -14,8 +14,8 @@ class FSMAdmin(StatesGroup):
     price = State()
 
 
+@dp.message_handler()
 async def fsm_start(message: types.Message):
-    print("hello")
     if message.chat.type == "private":
         await FSMAdmin.photo.set()
         await message.answer(f"Салам {message.from_user.full_name} скинь фотку блюда", reply_markup=client_kb.cancel_markup)
