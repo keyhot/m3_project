@@ -17,5 +17,6 @@ async def ban(message: types.Message):
     else:
         await message.answer("Это работает только в чатах!")
 
+
 def register_handlers_admin(dp: Dispatcher):
     dp.register_message_handler(ban, commands=['ban'], commands_prefix='.!')
