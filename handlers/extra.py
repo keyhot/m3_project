@@ -3,7 +3,7 @@ from aiogram import types, Dispatcher
 from random import choice
 
 
-@dp.message_handler()
+# @dp.message_handler()
 async def echo(message: types.Message):
     bad = ['java', 'bitch', 'lox', 'kotlin', 'плохой мальчик']
     text = int(message.text) ** 2 if message.text.isnumeric() else message.text

@@ -3,6 +3,9 @@ from config import bot, dp
 from aiogram import types, Dispatcher
 
 
+
+
+
 @dp.callback_query_handler(lambda call: call.data == "button_call_1")
 async def quiz_2(call: types.CallbackQuery):
     markup = InlineKeyboardMarkup()
